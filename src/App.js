@@ -1,8 +1,9 @@
 import { useEffect } from "react";
-import { Button, Container } from "@mui/material";
+import { Container } from "@mui/material";
 import theme from "./styles/theme";
 import { ThemeProvider } from "@mui/system";
 import Appbar from "./components/appbar";
+import Footer from "./components/footer";
 
 function App() {
     useEffect(() => {
@@ -20,16 +21,11 @@ function App() {
                 }
             >
                 <Appbar />
+                <Footer />
                 {/*
-          Appbar
-          Banner
-          Promotions
-          title
-          Products
-          footer
-          searchbox
-          appdrawer
-          */}
+                searchbox
+                appdrawer
+                */}
             </Container>
         </ThemeProvider>
     );
