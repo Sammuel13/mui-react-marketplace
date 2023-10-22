@@ -1,4 +1,4 @@
-import { List, Typography } from "@mui/material";
+import { IconButton, List, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { Colors } from "../theme";
 import { Box } from "@mui/system";
@@ -43,4 +43,12 @@ export const ActionIconsContainerMobile = styled(Box)(() => ({
     alignItems: "center",
     zIndex: 99,
     borderTop: `1px solid ${Colors.border}`,
+}));
+
+export const DrawerCloseButton = styled(IconButton)(() => ({
+    position: "absolute",
+    top: 10,
+    left: '300px',
+    zIndex: 1999,
+    color: Colors.secondary,
 }));

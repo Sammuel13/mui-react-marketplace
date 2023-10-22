@@ -1,4 +1,4 @@
-import { createTheme } from "@mui/material/styles";
+import { createTheme, lighten } from "@mui/material/styles";
 
 export const Colors = {
     primary: "#f44336",
@@ -45,6 +45,25 @@ const theme = createTheme({
             defaultProps: {
                 disableRipple: true,
                 disableElevation: true,
+            },
+        },
+        MuiDrawer: {
+            styleOverrides: {
+                paper: {
+                    width: "250px",
+                    padding: "1rem",
+                    background: Colors.shaft,
+                    color: Colors.white,
+                    // borderRadius: "0 1rem 1rem 0",
+                    borderRight: `1px solid ${Colors.dim_gray}`,
+                },
+            },
+        },
+        MuiDivider: {
+            styleOverrides: {
+                root: {
+                    borderColor: lighten(Colors.primary, 0.2),
+                },
             },
         },
     },
