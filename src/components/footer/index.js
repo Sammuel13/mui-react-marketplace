@@ -9,22 +9,27 @@ export default function Footer() {
     return (
         <Box
             sx={{
-                background: Colors.shaft,
+                // background: Colors.shaft,
+                background: '#0066B3',
                 color: Colors.white,
                 p: { xs: 4, md: 10 },
                 pt: 12,
                 pb: 12,
                 fontSize: { xs: "12px", md: "14px" },
+                display: 'flex', // Adicionando flex container
+                flexDirection: 'column', // Alinhando itens verticalmente
+                alignItems: 'center', // Alinhando itens horizontalmente
+                textAlign: 'center', // Alinhando o texto centralmente
             }}
         >
             <Grid container spacing={2} justifyContent="center">
                 <Grid item md={6} lg={4}>
                     <FooterTitle variant="body1">About Us</FooterTitle>
-                    <Typography variant="caption2">
+                    {/* <Typography variant="caption2">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Quisquam, voluptatem. Ut enim ad minima veniam, quis
                         nostrum.
-                    </Typography>
+                    </Typography> */}
                     <Box
                         sx={{
                             mt: 4,
@@ -62,8 +67,8 @@ export default function Footer() {
                     </List>
                 </Grid>
                 <Grid item md={6} lg={2}>
-                <FooterTitle variant="body1">My Account</FooterTitle>
-                <List>
+                    <FooterTitle variant="body1">My Account</FooterTitle>
+                    <List>
                         <ListItemText>
                             <Typography lineHeight={2} variant="caption2">
                                 Login
