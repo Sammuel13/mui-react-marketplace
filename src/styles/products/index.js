@@ -15,9 +15,9 @@ export const Product = styled(Box)(({ theme }) => ({
 
 export const ProductImage = styled("img")(({ src, theme }) => ({
     src: `url(${src})`,
-    width: "100%",
-    background: Colors.light_gray,
-    padding: "10px",
+    width: "70%",
+    // background: Colors.light_gray,
+    // padding: "10px",
     [theme.breakpoints.down("md")]: {
         width: "80%",
         padding: "24px",
@@ -32,7 +32,7 @@ export const ProductActionButton = styled(IconButton)(() => ({
 export const ProductFavButton = styled(ProductActionButton, {
     shouldFowardProp: (prop) => prop !== "isFav",
 })(({ isFav, theme }) => ({
-    color: isFav ? Colors.primary : Colors.light,
+    color: isFav ? Colors.primary : Colors.light_gray,
     [theme.breakpoints.up("md")]: {
         position: "absolute",
         top: 0,

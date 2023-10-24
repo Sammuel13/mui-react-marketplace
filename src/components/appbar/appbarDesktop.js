@@ -187,7 +187,7 @@ export default function AppbarDesktop() {
     const { setIsDrawerOpen } = useUIContext();
 
     return (
-        <Box sx={{ flexGrow: 1 }}>
+        <Box sx={{ flexGrow: 1, marginBottom: 5 }}>
             <AppBar position="static" sx={{ backgroundColor: "#FFCB05" }}>
                 <Toolbar sx={{ justifyContent: "space-between" }}>
                     <Box sx={{ display: "flex", alignItems: "center" }}>

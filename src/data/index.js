@@ -4,7 +4,7 @@ export const products = [
         name: "Carta 1",
         description: "Carta 1",
         price: 10,
-        image: "https://picsum.photos/200/300",
+        image: "https://tcg.pokemon.com/assets/img/sv-expansions/obsidian-flames/cards/pt-br/SV03_PTBR_1-2x.jpg",
     },
     {
         id: 2,
