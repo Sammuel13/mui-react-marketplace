@@ -1,13 +1,14 @@
 import { useEffect } from "react";
-import { Stack, Typography } from "@mui/material";
+import { Stack/*, Typography*/ } from "@mui/material";
 import theme from "./styles/theme";
 import { ThemeProvider } from "@mui/system";
 import Appbar from "./components/appbar";
 import Footer from "./components/footer";
 import AppDrawer from "./components/drawer";
 import { UIProvider } from "./context/ui";
-import { FitScreen, Height } from "@mui/icons-material";
+// import { FitScreen, Height } from "@mui/icons-material";
 import CadastrarCarta from "./components/criarCarta";
+import Products from "./components/products";
 
 function App() {
     useEffect(() => {
@@ -40,6 +41,9 @@ function App() {
                 <UIProvider>
                     <Appbar />
                     <AppDrawer />
+                    <Stack>
+                        <Products />
+                    </Stack>
                     <Stack>
                         <CadastrarCarta />
                     </Stack>
