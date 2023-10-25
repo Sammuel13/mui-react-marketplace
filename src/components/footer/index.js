@@ -20,7 +20,6 @@ export default function Footer() {
                 flexDirection: 'column', // Alinhando itens verticalmente
                 alignItems: 'center', // Alinhando itens horizontalmente
                 textAlign: 'center', // Alinhando o texto centralmente
-                marginTop: 5
             }}
         >
             <Grid container spacing={2} justifyContent="center">

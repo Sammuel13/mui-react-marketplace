@@ -40,11 +40,8 @@ import SearchIcon from "@mui/icons-material/Search";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
-<<<<<<< Updated upstream
 import Login from "../login";
-=======
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
->>>>>>> Stashed changes
 // import MoreIcon from "@mui/icons-material/MoreVert";
 
 const Search = styled("div")(({ theme }) => ({
@@ -287,9 +284,7 @@ export default function AppbarDesktop() {
                         >
                             <AccountCircle />
                         </IconButton>
-<<<<<<< Updated upstream
                         <Login isOpens={isLoginOpen} onClose={handleLoginClose} />
-=======
                         <IconButton
                             size="large"
                             edge="end"
@@ -303,7 +298,6 @@ export default function AppbarDesktop() {
                             </Badge>
                             
                         </IconButton>
->>>>>>> Stashed changes
                     </Box>
                 </Toolbar>
             </AppBar>
