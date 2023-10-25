@@ -15,11 +15,11 @@ export const Product = styled(Box)(({ theme }) => ({
 
 export const ProductImage = styled("img")(({ src, theme }) => ({
     src: `url(${src})`,
-    width: "70%",
+    width: "45%",
     // background: Colors.light_gray,
     // padding: "10px",
     [theme.breakpoints.down("md")]: {
-        width: "80%",
+        width: "70%",
         padding: "24px",
     },
 }));
