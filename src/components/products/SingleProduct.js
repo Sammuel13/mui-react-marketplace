@@ -3,14 +3,15 @@ import {
     Product,
     ProductActionButton,
     ProductActionsWrapper,
-    ProductAddToCart,
+    // ProductAddToCart,
     ProductFavButton,
     ProductImage,
 } from "../../styles/products";
 import ProductMeta from "./ProductMeta";
 import FavoriteIcon from "@mui/icons-material/Favorite";
-import FitScreenIcon from "@mui/icons-material/FitScreen";
+//import FitScreenIcon from "@mui/icons-material/FitScreen";
 import ShareIcon from "@mui/icons-material/Share";
+import EditIcon from '@mui/icons-material/Edit';
 
 export default function SingleProduct({ product, matches }) {
     return (
@@ -27,14 +28,14 @@ export default function SingleProduct({ product, matches }) {
                             <ShareIcon color="primary" />
                         </ProductActionButton>
                         <ProductActionButton>
-                            <FitScreenIcon color="primary" />
+                            <EditIcon color="primary" />
                         </ProductActionButton>
                     </Stack>
                 </ProductActionsWrapper>
             </Product>
-            <ProductAddToCart variant="contained">
+            {/* <ProductAddToCart variant="contained">
                 Adicionar ao carrinho
-            </ProductAddToCart>
+            </ProductAddToCart> */}
         </>
     );
 }

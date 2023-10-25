@@ -20,7 +20,7 @@ export const Colors = {
     shaft: "#333",
     dim_gray: "#696969",
     dove_gray: "#666666",
-    body_bg: "#f8f9fa",
+    body_bg: "#c2c2c2",
     light_gray: "#d3d3d3",
     white: "#fff",
     blach: "#000",
@@ -38,7 +38,12 @@ const theme = createTheme({
             light: Colors.secondaryLight,
             dark: Colors.secondaryDark,
         },
+        
+        background: {
+            default: Colors.body_bg,
+        },
     },
+
 
     components: {
         MuiButton: {

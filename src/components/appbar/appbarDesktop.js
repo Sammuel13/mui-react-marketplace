@@ -40,15 +40,19 @@ import SearchIcon from "@mui/icons-material/Search";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
+<<<<<<< Updated upstream
 import Login from "../login";
+=======
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+>>>>>>> Stashed changes
 // import MoreIcon from "@mui/icons-material/MoreVert";
 
 const Search = styled("div")(({ theme }) => ({
     position: "relative",
     borderRadius: theme.shape.borderRadius,
-    backgroundColor: alpha(theme.palette.common.white, 0.15),
+    backgroundColor: alpha(theme.palette.common.white, 0.25),
     "&:hover": {
-        backgroundColor: alpha(theme.palette.common.white, 0.25),
+        backgroundColor: alpha(theme.palette.common.white, 0.45),
     },
     marginRight: theme.spacing(2),
     //marginLeft: 0,
@@ -70,7 +74,7 @@ const SearchIconWrapper = styled("div")(({ theme }) => ({
 }));
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
-    color: "inherit",
+    color: "#000",
     "& .MuiInputBase-input": {
         padding: theme.spacing(1, 1, 1, 0),
         // vertical padding + font size from searchIcon
@@ -123,7 +127,7 @@ export default function AppbarDesktop() {
         <Menu
             anchorEl={anchorEl}
             anchorOrigin={{
-                vertical: "top",
+                vertical: "bottom",
                 horizontal: "right",
             }}
             id={menuId}
@@ -193,6 +197,21 @@ export default function AppbarDesktop() {
                 </IconButton>
                 <p>Profile</p>
             </MenuItem>
+            <MenuItem>
+                <IconButton
+                    size="large"
+                    aria-label="account of current user"
+                    aria-controls="primary-search-account-menu"
+                    aria-haspopup="true"
+                    color="inherit"
+                >
+                    <Badge badgeContent={17} color="error">
+                        <AddShoppingCartIcon />
+                    </Badge>
+                    
+                </IconButton>
+                <p>Cart</p>
+            </MenuItem>
         </Menu>
     );
 
@@ -224,7 +243,7 @@ export default function AppbarDesktop() {
                     </Box>
                     <Search>
                         <SearchIconWrapper>
-                            <SearchIcon />
+                            <SearchIcon sx={{ color: '#000' }}/>
                         </SearchIconWrapper>
                         <StyledInputBase
                             placeholder="Search…"
@@ -244,7 +263,7 @@ export default function AppbarDesktop() {
                             aria-label="show 4 new mails"
                             color="inherit"
                         >
-                            <Badge badgeContent={4} color="error">
+                            <Badge badgeContent={4} color="info">
                                 <MailIcon />
                             </Badge>
                         </IconButton>
@@ -253,7 +272,7 @@ export default function AppbarDesktop() {
                             aria-label="show 17 new notifications"
                             color="inherit"
                         >
-                            <Badge badgeContent={17} color="error">
+                            <Badge badgeContent={17} color="info">
                                 <NotificationsIcon />
                             </Badge>
                         </IconButton>
@@ -268,7 +287,23 @@ export default function AppbarDesktop() {
                         >
                             <AccountCircle />
                         </IconButton>
+<<<<<<< Updated upstream
                         <Login isOpens={isLoginOpen} onClose={handleLoginClose} />
+=======
+                        <IconButton
+                            size="large"
+                            edge="end"
+                            aria-label="account of current user"
+                            aria-controls={menuId}
+                            aria-haspopup="true"
+                            color="inherit"
+                        >
+                            <Badge badgeContent={2} color="info">
+                                <AddShoppingCartIcon />
+                            </Badge>
+                            
+                        </IconButton>
+>>>>>>> Stashed changes
                     </Box>
                 </Toolbar>
             </AppBar>

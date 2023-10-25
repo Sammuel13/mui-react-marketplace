@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Stack/*, Typography*/ } from "@mui/material";
+import { Stack, Typography } from "@mui/material";
 import theme from "./styles/theme";
 import { ThemeProvider } from "@mui/system";
 import Appbar from "./components/appbar";
@@ -9,6 +9,7 @@ import { UIProvider } from "./context/ui";
 // import { FitScreen, Height } from "@mui/icons-material";
 import CadastrarCarta from "./components/criarCarta";
 import Products from "./components/products";
+
 
 function App() {
     useEffect(() => {
@@ -40,10 +41,13 @@ function App() {
                 <UIProvider>
                     <Appbar />
                     <AppDrawer />
+                    <Typography variant="h4" paddingLeft={10} paddingBottom={5} >Meus Produtos à Venda</Typography>
                     <Stack>
                         <Products />
                     </Stack>
-                    <Stack>
+                    
+                    <Stack sx={{background: "#c2c2c21A"}}>
+                        <Typography variant="h4" paddingLeft={10} paddingBottom={5} paddingTop={5}>Adicionar Carta à Venda</Typography>
                         <CadastrarCarta />
                     </Stack>
                     <Footer sx={styles.footer}></Footer>

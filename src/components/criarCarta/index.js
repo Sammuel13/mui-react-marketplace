@@ -31,7 +31,7 @@ function CadastrarCarta() {
   };
 
   return (
-    <Container sx={{ paddingTop: '30px' }}>
+    <Container sx={{ paddingTop: '30px', paddingBottom: '30px' }}>
       <Grid container spacing={3} justifyContent={'center'} alignItems={'center'}>
         <Grid item xs={12} md={4}>
           <Paper>

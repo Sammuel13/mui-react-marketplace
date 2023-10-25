@@ -3,13 +3,14 @@ import {
     Product,
     ProductActionButton,
     ProductActionsWrapper,
-    ProductAddToCart,
+    // ProductAddToCart,
     ProductFavButton,
     ProductImage,
 } from "../../styles/products";
 import ProductMeta from "./ProductMeta";
 import FavoriteIcon from "@mui/icons-material/Favorite";
-import FitScreenIcon from "@mui/icons-material/FitScreen";
+// import FitScreenIcon from "@mui/icons-material/FitScreen";
+import EditIcon from '@mui/icons-material/Edit';
 import ShareIcon from "@mui/icons-material/Share";
 import { useState } from "react";
 
@@ -33,10 +34,10 @@ export default function SingleProductDesktop({ product, matches }) {
                 <ProductFavButton isFav={0}>
                     <FavoriteIcon />
                 </ProductFavButton>
-                {showOptions && 
-                    <ProductAddToCart show={showOptions} variant="contained">
-                        Add to cart
-                    </ProductAddToCart>
+                {showOptions  
+                    // && <ProductAddToCart show={showOptions} variant="contained">
+                    //     Add to cart
+                    // </ProductAddToCart>
                 }
                 <ProductActionsWrapper show={showOptions}>
                     <Stack direction="column">
@@ -44,7 +45,7 @@ export default function SingleProductDesktop({ product, matches }) {
                             <ShareIcon color="primary" />
                         </ProductActionButton>
                         <ProductActionButton>
-                            <FitScreenIcon color="primary" />
+                            <EditIcon color="primary" />
                         </ProductActionButton>
                     </Stack>
                 </ProductActionsWrapper>
