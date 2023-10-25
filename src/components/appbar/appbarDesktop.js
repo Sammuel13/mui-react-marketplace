@@ -36,6 +36,44 @@ import Badge from "@mui/material/Badge";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
+// import { ListItemButton, ListItemIcon, ListItemText } from "@mui/material";
+// import { AppbarContainer, AppbarHeader, MyList } from "../../styles/appbar";
+// import SearchIcon from "@mui/icons-material/Search";
+// import Actions from "./actions";
+
+// export default function AppbarDesktop({ matches }) {
+//     return (
+//         <AppbarContainer>
+//             <AppbarHeader>Marketplace</AppbarHeader>
+//             <MyList type="row">
+//                 <ListItemText primary="Home" />
+//                 <ListItemText primary="Categories" />
+//                 <ListItemText primary="Products" />
+//                 <ListItemText primary="Contact Us" />
+//                 <ListItemButton>
+//                     <ListItemIcon>
+//                         <SearchIcon />
+//                     </ListItemIcon>
+//                 </ListItemButton>
+//             </MyList>
+//             <Actions matches={matches} />
+//         </AppbarContainer>
+//     );
+// }
+
+import * as React from "react";
+import { styled, alpha } from "@mui/material/styles";
+import { useUIContext } from "../../context/ui";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
+import IconButton from "@mui/material/IconButton";
+import Typography from "@mui/material/Typography";
+import InputBase from "@mui/material/InputBase";
+import Badge from "@mui/material/Badge";
+import MenuItem from "@mui/material/MenuItem";
+import Menu from "@mui/material/Menu";
+import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import MailIcon from "@mui/icons-material/Mail";
