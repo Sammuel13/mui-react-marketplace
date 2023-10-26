@@ -32,7 +32,7 @@ export default function Products() {
                 container
                 spacing={{ xs: 2, md: 1 }}
                 justifyContent={"justify"}
-                sx={{ margin: "20px 4px 10px 4px", paddingRight:"15px" }}
+                sx={{ margin: "20px 4px 10px 4px", paddingRight: "15px" }}
                 columns={{ xs: 4, sm: 8, md: 20 }}
             >
                 {renderProducts}

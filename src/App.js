@@ -41,12 +41,23 @@ function App() {
                 <UIProvider>
                     <Appbar />
                     <AppDrawer />
-                    <Typography variant="h4" paddingLeft={10} paddingBottom={5} >Meus Produtos à Venda</Typography>
+                    <Typography
+                        variant="h4"
+                        sx={{
+                            paddingLeft: { xs: 5, sm: 10} ,
+                            paddingBottom: { xs: 2, sm: 10} ,
+                            paddingTop: { xs: 2, sm: 0},
+                            fontSize: { xs: 'h6.fontSize', sm: 'h4.fontSize' }  // Define o tamanho da fonte para h6 em dispositivos móveis e h4 em telas maiores.
+                        }}
+                    >
+                        Meus Produtos à Venda
+                    </Typography>
+
                     <Stack>
                         <Products />
                     </Stack>
-                    
-                    <Stack sx={{background: "#c2c2c21A"}}>
+
+                    <Stack sx={{ background: "#c2c2c21A" }}>
                         <Typography variant="h4" paddingLeft={10} paddingBottom={5} paddingTop={5}>Adicionar Carta à Venda</Typography>
                         <CadastrarCarta />
                     </Stack>

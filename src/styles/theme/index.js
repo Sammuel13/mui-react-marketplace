@@ -38,7 +38,7 @@ const theme = createTheme({
             light: Colors.secondaryLight,
             dark: Colors.secondaryDark,
         },
-        
+
         background: {
             default: Colors.body_bg,
         },
@@ -57,7 +57,7 @@ const theme = createTheme({
                 paper: {
                     width: "250px",
                     padding: "1rem",
-                    background: Colors.shaft,
+                    background: "#3D7DCA",
                     color: Colors.white,
                     // borderRadius: "0 1rem 1rem 0",
                     borderRight: `1px solid ${Colors.dim_gray}`,
@@ -67,7 +67,7 @@ const theme = createTheme({
         MuiDivider: {
             styleOverrides: {
                 root: {
-                    borderColor: lighten(Colors.primary, 0.2),
+                    borderColor: "#FFCB05",
                 },
             },
         },

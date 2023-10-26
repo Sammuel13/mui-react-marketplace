@@ -42,6 +42,8 @@ import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import Login from "../login";
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import logo from '../../img/logo.png';
+
 // import MoreIcon from "@mui/icons-material/MoreVert";
 
 const Search = styled("div")(({ theme }) => ({
@@ -91,7 +93,7 @@ export default function AppbarDesktop() {
     const handleProfileMenuClick = () => {
         setIsLoginOpen(true); // Define o estado para true quando o ícone de perfil é clicado
     };
-  
+
     const handleLoginClose = () => {
         setIsLoginOpen(false); // Define o estado para false quando o Login é fechado
     };
@@ -205,7 +207,7 @@ export default function AppbarDesktop() {
                     <Badge badgeContent={17} color="error">
                         <AddShoppingCartIcon />
                     </Badge>
-                    
+
                 </IconButton>
                 <p>Cart</p>
             </MenuItem>
@@ -218,7 +220,8 @@ export default function AppbarDesktop() {
         <Box sx={{ flexGrow: 1, marginBottom: 5 }}>
             <AppBar position="static" sx={{ backgroundColor: "#FFCB05" }}>
                 <Toolbar sx={{ justifyContent: "space-between" }}>
-                    <Box sx={{ display: "flex", alignItems: "center" }}>
+
+                    <Box sx={{ display: "flex", flexDirection: 'row', alignItems: 'center' }}>
                         <IconButton
                             size="large"
                             edge="start"
@@ -228,19 +231,29 @@ export default function AppbarDesktop() {
                             onClick={() => setIsDrawerOpen(true)}
                         >
                             <MenuIcon />
+
                         </IconButton>
+                        {/* Aqui está a logo */}
+                        <img src={logo} alt="PokeMarketplace Logo" style={{ width: 150, marginBottom: '0px' }} />
+
                         <Typography
-                            variant="h6"
-                            noWrap
+                            variant="h8"
                             component="div"
-                            sx={{ display: { xs: "none", sm: "block" } }}
+                            sx={{
+                                color: "#3D7DCA",  // Cor amarela da logo do Pokémon.
+                                textShadow: "2px 2px 4px #FFFFFFAF, -2px 2px 4px #FFFFFFAF, 2px -2px 4px #FFFFFFAF, -2px -2px 4px #FFFFFFAF",  // Sombra branca esfumaçada.
+                                fontWeight: "bold",
+                                display: { xs: "none", sm: "block" }
+                            }}
                         >
-                            PokeMarketplace
+                            Card Marketplace
                         </Typography>
+
                     </Box>
+
                     <Search>
                         <SearchIconWrapper>
-                            <SearchIcon sx={{ color: '#000' }}/>
+                            <SearchIcon sx={{ color: '#000' }} />
                         </SearchIconWrapper>
                         <StyledInputBase
                             placeholder="Search…"
@@ -252,7 +265,8 @@ export default function AppbarDesktop() {
                         sx={{
                             display: "flex",
                             alignItems: "center",
-                            gap: "16px",
+                            alignContent: "right",
+                            gap: "10px",
                         }}
                     >
                         <IconButton
@@ -275,29 +289,25 @@ export default function AppbarDesktop() {
                         </IconButton>
                         <IconButton
                             size="large"
-                            edge="end"
-                            aria-label="account of current user"
-                            aria-controls={menuId}
-                            aria-haspopup="true"
-                            onClick={handleProfileMenuClick}
+                            aria-label="cart"
                             color="inherit"
                         >
-                            <AccountCircle />
+                            <Badge badgeContent={2} color="info">
+                                <AddShoppingCartIcon />
+                            </Badge>
                         </IconButton>
-                        <Login isOpens={isLoginOpen} onClose={handleLoginClose} />
                         <IconButton
                             size="large"
                             edge="end"
                             aria-label="account of current user"
                             aria-controls={menuId}
                             aria-haspopup="true"
+                            onClick={handleProfileMenuOpen}
                             color="inherit"
                         >
-                            <Badge badgeContent={2} color="info">
-                                <AddShoppingCartIcon />
-                            </Badge>
-                            
+                            <AccountCircle />
                         </IconButton>
+                        <Login isOpens={isLoginOpen} onClose={handleLoginClose} />
                     </Box>
                 </Toolbar>
             </AppBar>
