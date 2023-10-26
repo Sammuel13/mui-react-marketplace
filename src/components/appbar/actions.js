@@ -15,7 +15,7 @@ export default function Actions({ matches }) {
         : ActionIconsContainerDesktop;
 
     return (
-        <Component>
+        <Component sx={{ backgroundColor: "#c2c2c2", zIndex: "1500" }}>
             <MyList type="row">
                 <ListItemButton
                     sx={{
@@ -26,7 +26,7 @@ export default function Actions({ matches }) {
                         sx={{
                             justifyContent: "center",
                             display: "flex",
-                            color: matches && Colors.secondary,
+                            color: matches && Colors.primary,
                         }}
                     >
                         <ShoppingCartIcon />
@@ -42,7 +42,7 @@ export default function Actions({ matches }) {
                         sx={{
                             justifyContent: "center",
                             display: "flex",
-                            color: matches && Colors.secondary,
+                            color: matches && Colors.primary,
                         }}
                     >
                         <PersonIcon />
@@ -58,7 +58,7 @@ export default function Actions({ matches }) {
                         sx={{
                             justifyContent: "center",
                             display: "flex",
-                            color: matches && Colors.secondary,
+                            color: matches && Colors.primary,
                         }}
                     >
                         <FavouriteIcon />

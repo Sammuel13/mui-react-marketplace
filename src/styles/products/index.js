@@ -2,6 +2,9 @@ import { Box, IconButton } from "@mui/material";
 import { styled } from "@mui/system";
 import { Colors } from "../theme";
 import { slideInRight } from "../../animation";
+import 'react-toastify/dist/ReactToastify.css';
+import { toast } from 'react-toastify';
+
 
 export const Product = styled(Box)(({ theme }) => ({
     display: "flex",
@@ -40,7 +43,7 @@ export const ProductActionButton = styled(IconButton)(() => ({
 export const ProductFavButton = styled(ProductActionButton, {
     shouldFowardProp: (prop) => prop !== "isFav",
 })(({ isFav, theme }) => ({
-    color: isFav ? Colors.primary : Colors.light_gray,
+    color: isFav ? "red" : Colors.light_gray,
     [theme.breakpoints.up("md")]: {
         position: "absolute",
         top: 0,
@@ -75,7 +78,7 @@ export const ProductMetaWrapper = styled(Box)(({ theme }) => ({
     alignItems: "center",
     zIndex: 1000,           // Adicione esta linha
     position: 'relative',
-    background:"#fff"   // Adicione esta linha
+    background: "#fff"   // Adicione esta linha
 }));
 
 

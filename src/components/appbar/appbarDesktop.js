@@ -275,7 +275,7 @@ export default function AppbarDesktop() {
     const { setIsDrawerOpen } = useUIContext();
 
     return (
-        <Box sx={{ flexGrow: 1, marginBottom: 5 }}>
+        <Box sx={{ flexGrow: 1, marginBottom: 1 }}>
             <AppBar position="static" sx={{ backgroundColor: "#FFCB05" }}>
                 <Toolbar sx={{ justifyContent: "space-between" }}>
 
@@ -283,9 +283,8 @@ export default function AppbarDesktop() {
                         <IconButton
                             size="large"
                             edge="start"
-                            color="inherit"
                             aria-label="open drawer"
-                            sx={{ mr: 2 }}
+                            sx={{ mr: 2, color: "#3D7DCA" }}
                             onClick={() => setIsDrawerOpen(true)}
                         >
                             <MenuIcon />
@@ -298,7 +297,7 @@ export default function AppbarDesktop() {
                             variant="h8"
                             component="div"
                             sx={{
-                                color: "#3D7DCA",  // Cor amarela da logo do Pokémon.
+                                color: "#3D7DCA",  // Cor azul da logo do Pokémon.
                                 textShadow: "2px 2px 4px #FFFFFFAF, -2px 2px 4px #FFFFFFAF, 2px -2px 4px #FFFFFFAF, -2px -2px 4px #FFFFFFAF",  // Sombra branca esfumaçada.
                                 fontWeight: "bold",
                                 display: { xs: "none", sm: "block" }
@@ -309,14 +308,14 @@ export default function AppbarDesktop() {
 
                     </Box>
 
-                    <Search>
-                        <SearchIconWrapper>
-                            <SearchIcon sx={{ color: '#000' }} />
+                    <Search >
+                        <SearchIconWrapper sx={{background: "#ffffffAF",  zIndex: 100,}}>
+                            <SearchIcon sx={{ color: "#2B609B" }} />
                         </SearchIconWrapper>
                         <StyledInputBase
                             placeholder="Search…"
                             inputProps={{ "aria-label": "search" }}
-                            sx={{ width: "100%" }}
+                            sx={{ width: "100%", color: "#2B609B", paddingLeft: "15px", backgroundColor: "#ffffffA8" }}
                         />
                     </Search>
                     <Box
@@ -330,27 +329,27 @@ export default function AppbarDesktop() {
                         <IconButton
                             size="large"
                             aria-label="show 4 new mails"
-                            color="inherit"
+                            sx={{ color: "#2B609B" }}
                         >
-                            <Badge badgeContent={4} color="info">
+                            <Badge badgeContent={4} color="error">
                                 <MailIcon />
                             </Badge>
                         </IconButton>
                         <IconButton
                             size="large"
                             aria-label="show 17 new notifications"
-                            color="inherit"
+                            sx={{ color: "#2B609B" }}
                         >
-                            <Badge badgeContent={17} color="info">
+                            <Badge badgeContent={17} color="error">
                                 <NotificationsIcon />
                             </Badge>
                         </IconButton>
                         <IconButton
                             size="large"
                             aria-label="cart"
-                            color="inherit"
+                            sx={{ color: "#2B609B" }}
                         >
-                            <Badge badgeContent={2} color="info">
+                            <Badge badgeContent={2} color="error">
                                 <AddShoppingCartIcon />
                             </Badge>
                         </IconButton>
@@ -361,7 +360,7 @@ export default function AppbarDesktop() {
                             aria-controls={menuId}
                             aria-haspopup="true"
                             onClick={handleProfileMenuOpen}
-                            color="inherit"
+                            sx={{ color: "#2B609B" }}
                         >
                             <AccountCircle />
                         </IconButton>

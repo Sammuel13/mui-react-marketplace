@@ -22,52 +22,52 @@ export default function Footer() {
                 textAlign: 'center', // Alinhando o texto centralmente
             }}
         >
-            <Grid container spacing={2} justifyContent="center">
-                <Grid item md={6} lg={4}>
+            <Grid container spacing={2} justifyContent="center" sx={{ paddingBottom: { xs: '50px', sm: '0px' } }}>
+                {/* <Grid item md={6} lg={4}>
                     <FooterTitle variant="body1">About Us</FooterTitle>
                     {/* <Typography variant="caption2">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Quisquam, voluptatem. Ut enim ad minima veniam, quis
                         nostrum.
                     </Typography> */}
-                    <Box
-                        sx={{
-                            mt: 4,
-                            color: Colors.dove_gray,
-                        }}
-                    >
-                        <FacebookIcon sx={{ mr: 1 }} />
-                        <TwitterIcon sx={{ mr: 1 }} />
-                        <InstagramIcon />
-                    </Box>
-                </Grid>
+                {/* <Box
+                    sx={{
+                        mt: 4,
+                        color: Colors.dove_gray,
+                    }}
+                >
+                    <FacebookIcon sx={{ mr: 1 }} />
+                    <TwitterIcon sx={{ mr: 1 }} />
+                    <InstagramIcon />
+                </Box>
+            </Grid> */}
                 <Grid item md={6} lg={2}>
-                    <FooterTitle variant="body1">Information</FooterTitle>
+                    <FooterTitle variant="body1">Informação</FooterTitle>
                     <List>
                         <ListItemText>
                             <Typography lineHeight={2} variant="caption2">
-                                About Us
+                                Sobre nós
                             </Typography>
                         </ListItemText>
                         <ListItemText>
                             <Typography lineHeight={2} variant="caption2">
-                                Order Tracking
+                                Rastreamento
                             </Typography>
                         </ListItemText>
                         <ListItemText>
                             <Typography lineHeight={2} variant="caption2">
-                                Privacy &amp; Policy
+                                Privacy &amp; Política
                             </Typography>
                         </ListItemText>
                         <ListItemText>
                             <Typography lineHeight={2} variant="caption2">
-                                Terms &amp; Conditions
+                                Terms &amp; Condições
                             </Typography>
                         </ListItemText>
                     </List>
                 </Grid>
                 <Grid item md={6} lg={2}>
-                    <FooterTitle variant="body1">My Account</FooterTitle>
+                    <FooterTitle variant="body1">Minha Conta</FooterTitle>
                     <List>
                         <ListItemText>
                             <Typography lineHeight={2} variant="caption2">
@@ -76,17 +76,17 @@ export default function Footer() {
                         </ListItemText>
                         <ListItemText>
                             <Typography lineHeight={2} variant="caption2">
-                                My Cart
+                                Meu Carrinho
                             </Typography>
                         </ListItemText>
                         <ListItemText>
                             <Typography lineHeight={2} variant="caption2">
-                                My Account
+                                Minha Conta
                             </Typography>
                         </ListItemText>
                         <ListItemText>
                             <Typography lineHeight={2} variant="caption2">
-                                Wishlist
+                                Lista de Desejos
                             </Typography>
                         </ListItemText>
                     </List>
@@ -109,9 +109,18 @@ export default function Footer() {
                                 marketplace@email.com
                             </Typography>
                         </ListItemText>
+                        <Box
+                            sx={{
+                                color: Colors.white,
+                            }}
+                        >
+                            <FacebookIcon sx={{ mr: 1 }} />
+                            <TwitterIcon sx={{ mr: 1 }} />
+                            <InstagramIcon />
+                        </Box>
                     </List>
                 </Grid>
             </Grid>
-        </Box>
+        </Box >
     );
 }

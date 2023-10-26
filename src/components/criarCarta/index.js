@@ -62,7 +62,7 @@ function CadastrarCarta() {
                 ) : (
                   <Typography color="textSecondary" >Arraste e solte a imagem da carta aqui</Typography>
                 )}
-                <UploadFileIcon fontSize="large" sx={{color: '#C2C2C2'}} />
+                <UploadFileIcon fontSize="large" sx={{ color: '#C2C2C2' }} />
               </Box>
             </Box>
           </Paper>
@@ -80,6 +80,7 @@ function CadastrarCarta() {
                   name="nome"
                   value={formData.nome}
                   onChange={handleFormChange}
+                  sx={{ paddingBottom: "7px" }}
                 />
                 <TextField
                   fullWidth
@@ -87,6 +88,7 @@ function CadastrarCarta() {
                   name="tipo"
                   value={formData.tipo}
                   onChange={handleFormChange}
+                  sx={{ paddingBottom: "7px" }}
                 />
                 <TextField
                   fullWidth
@@ -100,9 +102,9 @@ function CadastrarCarta() {
                 {/* Outros campos do formulário */}
                 <Box mt={2}>
                   <Button
-                    sx={{background:'#E3350D'}}
+                    sx={{ background: '#2B609B' }}
                     variant="contained"
-                    // color="secondary"
+                    color="primary"
                     startIcon={<CloudUploadIcon />}
                     type="submit"
                   >
