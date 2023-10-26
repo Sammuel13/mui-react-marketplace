@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import {
     Dialog,
     Grid,
@@ -14,25 +13,26 @@ import {
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 
 const Login = ({ isOpen }) => {
-    const paperStyle = {
-        position: "fixed",
-        top: "70px",
-        right: "20px",
-        padding: "20px",
-        height: "400px",
-        width: "280px",
-        margin: "auto auto",
-    };
-    const avatarStyle = { backgroundColor: "#1bbd7e" };
-    const btnstyle = { margin: "8px 0" };
     return (
         <Dialog open={isOpen}>
-            <Paper style={paperStyle}>
-                <Grid align="center">
-                    <Avatar style={avatarStyle}>
+            <Paper
+                style={{
+                    position: "fixed",
+                    top: "70px",
+                    right: "20px",
+                    padding: "20px",
+                    height: "400px",
+                    width: "280px",
+                    margin: "auto auto",
+                }}
+            >
+                <Grid container direction="column" alignItems="center">
+                    <Avatar style={{ backgroundColor: "#1bbd7e" }}>
                         <LockOutlinedIcon />
                     </Avatar>
-                    <h2>Login</h2>
+                    <Typography component="h2" variant="h5">
+                        Login
+                    </Typography>
                 </Grid>
                 <TextField
                     label="Nome de Usuário"
@@ -56,7 +56,7 @@ const Login = ({ isOpen }) => {
                     type="submit"
                     color="primary"
                     variant="contained"
-                    style={btnstyle}
+                    style={{ margin: "8px 0" }}
                     fullWidth
                 >
                     Entrar

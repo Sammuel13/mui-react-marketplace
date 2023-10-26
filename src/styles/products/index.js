@@ -1,7 +1,7 @@
-import { Box, Button, IconButton } from "@mui/material";
+import { Box, IconButton } from "@mui/material";
 import { styled } from "@mui/system";
 import { Colors } from "../theme";
-import { slideInBottom, slideInRight } from "../../animation";
+import { slideInRight } from "../../animation";
 
 export const Product = styled(Box)(({ theme }) => ({
     display: "flex",

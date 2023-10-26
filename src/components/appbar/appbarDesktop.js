@@ -30,7 +30,6 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
 import InputBase from "@mui/material/InputBase";
 import Badge from "@mui/material/Badge";
 import MenuItem from "@mui/material/MenuItem";
@@ -40,9 +39,22 @@ import SearchIcon from "@mui/icons-material/Search";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
-import Login from "../login";
+// import Login from "../login";
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import logo from '../../img/logo.png';
+import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
+import {
+    Dialog,
+    Grid,
+    Paper,
+    Avatar,
+    TextField,
+    Button,
+    Typography,
+    Link,
+    FormControlLabel,
+    Checkbox,
+} from "@mui/material";
 
 // import MoreIcon from "@mui/icons-material/MoreVert";
 
@@ -88,20 +100,10 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 export default function AppbarDesktop() {
 
-    const [isLoginOpen, setIsLoginOpen] = React.useState(false); // Adiciona um estado para controlar a visibilidade do Login
-
-    const handleProfileMenuClick = () => {
-        setIsLoginOpen(true); // Define o estado para true quando o ícone de perfil é clicado
-    };
-
-    const handleLoginClose = () => {
-        setIsLoginOpen(false); // Define o estado para false quando o Login é fechado
-    };
-
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
-    const isMenuOpen = Boolean(anchorEl);
+    const isOpen = Boolean(anchorEl);
     const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
     const handleProfileMenuOpen = (event) => {
@@ -123,24 +125,80 @@ export default function AppbarDesktop() {
 
     const menuId = "primary-search-account-menu";
     const renderMenu = (
-        <Menu
-            anchorEl={anchorEl}
-            anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "right",
-            }}
-            id={menuId}
-            keepMounted
-            transformOrigin={{
-                vertical: "top",
-                horizontal: "right",
-            }}
-            open={isMenuOpen}
-            onClose={handleMenuClose}
-        >
-            <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-            <MenuItem onClick={handleMenuClose}>My account</MenuItem>
-        </Menu>
+        <Dialog open={isOpen} onClose={handleMenuClose}>
+            <Paper
+                style={{
+                    position: "fixed",
+                    top: "60px",
+                    right: "20px",
+                    padding: "20px",
+                    height: "400px",
+                    width: "280px",
+                    margin: "auto auto",
+                }}
+            >
+                <Grid container direction="column" alignItems="center">
+                    <Avatar style={{ backgroundColor: "#1bbd7e" }}>
+                        <LockOutlinedIcon />
+                    </Avatar>
+                    <Typography component="h2" variant="h5">
+                        Login
+                    </Typography>
+                </Grid>
+                <TextField
+                    label="Nome de Usuário"
+                    placeholder="Digite seu nome de usuário"
+                    fullWidth
+                    required
+                    style={{ marginBottom: "1rem" }}
+                />
+                <TextField
+                    label="Senha"
+                    placeholder="Digite sua senha"
+                    type="password"
+                    fullWidth
+                    required
+                />
+                <FormControlLabel
+                    control={<Checkbox name="checkedB" color="primary" />}
+                    label="Lembrar-me"
+                />
+                <Button
+                    type="submit"
+                    color="primary"
+                    variant="contained"
+                    style={{ margin: "8px 0" }}
+                    fullWidth
+                >
+                    Entrar
+                </Button>
+                <Typography>
+                    <Link href="#">Esqueceu Senha?</Link>
+                </Typography>
+                <Typography>
+                    {" "}
+                    Não possui uma conta? <Link href="#">Criar conta</Link>
+                </Typography>
+            </Paper>
+        </Dialog>
+        // <Menu
+        //     anchorEl={anchorEl}
+        //     anchorOrigin={{
+        //         vertical: "bottom",
+        //         horizontal: "right",
+        //     }}
+        //     id={menuId}
+        //     keepMounted
+        //     transformOrigin={{
+        //         vertical: "top",
+        //         horizontal: "right",
+        //     }}
+        //     open={isMenuOpen}
+        //     onClose={handleMenuClose}
+        // >
+        //     <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
+        //     <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+        // </Menu>
     );
 
     const mobileMenuId = "primary-search-account-menu-mobile";
@@ -307,7 +365,6 @@ export default function AppbarDesktop() {
                         >
                             <AccountCircle />
                         </IconButton>
-                        <Login isOpens={isLoginOpen} onClose={handleLoginClose} />
                     </Box>
                 </Toolbar>
             </AppBar>
